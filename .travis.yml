@@ -29,7 +29,6 @@ install:
 #  - cd $TRAVIS_BUILD_DIR/turmeric.mediba.jp && bundle exec rake db:migrate RAILS_ENV=test
 
 script:
-  - ls -la
   - vendor/bin/phpunit $TRAVIS_BUILD_DIR/tests
 #  - cd $TRAVIS_BUILD_DIR/turmeric.mediba.jp && bundle exec rspec spec/models
 
