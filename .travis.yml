@@ -1,0 +1,33 @@
+language:
+  - php
+
+branches:
+  except:
+    - /^feature.*$/
+
+git:
+  depth: 1
+
+php:
+  - 5.5
+
+install:
+  - composer install --dev
+
+#before_script:
+#  - cp $TRAVIS_BUILD_DIR/turmeric.mediba.jp/config/database.travis.yml $TRAVIS_BUILD_DIR/turmeric.mediba.jp/config/database.yml
+#  - mysql -e 'CREATE DATABASE sunshine_test;'
+#  - mysql -e 'use sunshine_test;'
+#  - mysql sunshine_test < $TRAVIS_BUILD_DIR/sql/ddl/contents/sunshine_contents.ddl.sql
+#  - mysql sunshine_test < $TRAVIS_BUILD_DIR/sql/ddl/contents/sunshine_contents_index.ddl.sql
+#  - mysql sunshine_test < $TRAVIS_BUILD_DIR/sql/ddl/event/sunshine_event.ddl.sql
+#  - mysql sunshine_test < $TRAVIS_BUILD_DIR/sql/ddl/event/sunshine_event_index.ddl.sql
+#  - cd $TRAVIS_BUILD_DIR/turmeric.mediba.jp && bundle exec rake db:migrate RAILS_ENV=test
+
+script:
+  - vendor/bin/phpunit tests/
+#  - cd $TRAVIS_BUILD_DIR/turmeric.mediba.jp && bundle exec rspec spec/models
+
+notifications:
+  email:
+   - yamaura@mediba.jp
