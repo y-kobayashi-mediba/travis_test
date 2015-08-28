@@ -1,6 +1,35 @@
 <?php
+/**
+ * StackTest.php
+ *
+ * PHP version 5.5
+ *
+ * @category Test
+ * @package  TravisTest
+ * @author   YUki Kobayashi <y-kobayashi@mediba.jp>
+ * @license  mediba inc. http://www.mediba.jp
+ * @link     none
+ */
+
+/**
+ * Stackテスト
+ *
+ * class StackTest
+ *
+ * @category Test
+ * @package  TravisTest
+ * @author   YUki Kobayashi <y-kobayashi@mediba.jp>
+ * @license  mediba inc. http://www.mediba.jp
+ * @link     none
+ */
 class StackTest extends PHPUnit_Framework_TestCase
 {
+
+    /**
+     * testPushAndPop
+     *
+     * @return void
+     */
     public function testPushAndPop()
     {
         $stack = array();
