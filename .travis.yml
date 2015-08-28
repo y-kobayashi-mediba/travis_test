@@ -21,7 +21,7 @@ install:
 script:
   - find ./ -name "*.php" | fgrep -v "/vendor/" | xargs -l1 -P8 php -l > /dev/null 
   - vendor/bin/phpunit $TRAVIS_BUILD_DIR/tests
-  - vendor/bin/phpcs -n --extensions=php --standard=PEAR --ignore="*/vendor/*"
+  - vendor/bin/phpcs -n --extensions=php --standard=PEAR --ignore="*/vendor/*" ./
 
 notifications:
   email:
